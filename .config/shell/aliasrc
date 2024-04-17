@@ -21,6 +21,7 @@ se() {
 # Verbosity and settings that you pretty much just always are going to want.
 alias \
 	cp="cp -iv" \
+	cat="bat" \
 	mv="mv -iv" \
 	rm="rm -vI" \
 	bc="bc -ql" \
@@ -29,11 +30,28 @@ alias \
 	yt="yt-dlp --embed-metadata -i" \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+	rmd='/bin/rm  --recursive --force --verbose ' \
+	petty="pycodestyle" \
+	ranger='. ranger' \
+	disku='ncdu' \
+	valgrind='valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes' \
+	speed='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' \
+	zrc='vim ~/.config/zsh/zshrc' \
+	fonts='fc-cache -fv' \
+	!!='sudo !!' \
+	install='sudo pacman -Sy' \
+	update='sudo pacman -Syu' \
+	search='sudo pacman -Ss' \
+	remove='sudo pacman -Rns' \
+	ssh1='ssh ubuntu@54.237.57.5' \
+	ssh2='ssh ubuntu@100.24.244.206' \
+	sshlb='ssh ubuntu@52.86.186.202'
 
 # Colorize commands when possible.
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
+	ll="lsd -la" \
+	ls="lsd -l" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi" \

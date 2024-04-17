@@ -1,0 +1,66 @@
+############################
+#### brightness control
+###########################
+super + control + j
+	brightnessctl set 3%-
+
+super + control + k
+	brightnessctl set 3%+
+
+############################
+#### applications
+############################
+# rofi
+# control + p
+#     rofi -show drun
+
+# Reload sxhkd:
+super + shift + s
+    pkill -USR1 -x sxhkd
+
+# lock system
+control + alt + l
+    slock
+
+# ChatGpt
+alt + g 
+    brave --app=https://chat.openai.com
+
+# tradingview
+alt + t
+    brave --app="https://www.tradingview.com/chart/nlWf0UHW/"
+# twitter
+alt + T
+    brave --app="https://x.com"
+
+# Discord
+alt + d
+    discord
+
+# Xkill
+super + Escape
+    xkill
+
+# Flameshot (screenshot tool)
+control + shift + s
+    flameshot gui
+
+# Clipman
+alt + shift + v
+    clipmenu
+
+# File-Manager
+alt + f
+    thunar
+
+# Spotify
+alt + s
+    spotify
+
+# dm-scripts
+alt + p
+   dm-hub
+
+# dm-web
+alt + w
+    dm-web

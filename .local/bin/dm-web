@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# List of websites
+websites=(
+    "investing.com/economic-calendar/"
+    "coinmarketcap.com"
+    "mataf.net/en/forex/tools/correlation"
+)
+
+# Prompt user to select a website using dmenu
+selected_website=$(printf '%s\n' "${websites[@]}" | dmenu -l "${#websites[@]}" -p "Select a website:")
+
+# Check if user selected a website
+if [[ -n "$selected_website" ]]; then
+    # Launch Brave with the selected website
+    brave --app="https://$selected_website"
+fi
