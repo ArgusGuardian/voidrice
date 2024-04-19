@@ -22,9 +22,14 @@ super + shift + s
 control + alt + l
     slock
 
+# firefox
+alt + w
+    firefox
+
 # ChatGpt
 alt + g 
     brave --app=https://chat.openai.com
+    # floorp -new-window  --kiosk "https://chat.openai.com/"
 
 # tradingview
 alt + t
@@ -62,5 +67,13 @@ alt + p
    dm-hub
 
 # dm-web
-alt + w
-    dm-web
+# alt + w
+#     dm-web
+
+# xfce taskmanager
+control + shift + Escape
+    xfce4-taskmanager
+
+# toggle keyboard layout
+control + space
+    change_lang
