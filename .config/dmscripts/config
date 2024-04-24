@@ -19,7 +19,7 @@ FMENU="fzf --bind=enter:replace-query+print-query --border=rounded --margin=5% -
 
 PDF_VIEWER="zathura"
 
-DMBROWSER="brave"
+DMBROWSER="firefox"
 # DMBROWSER="qutebrowser"
 
 DMTERM="st -e"
