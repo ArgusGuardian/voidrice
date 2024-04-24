@@ -22,9 +22,9 @@ super + shift + s
 control + alt + l
     slock
 
-# firefox
+# brave
 alt + w
-    firefox
+    brave
 
 # ChatGpt
 alt + g 

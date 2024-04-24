@@ -23,7 +23,8 @@ alias \
 	cp="cp -iv" \
 	cat="bat" \
 	mv="mv -iv" \
-	rm="rm -vI" \
+	rm="trash -f -v" \
+	rmd="trash -d -f -v" \
 	bc="bc -ql" \
 	rsync="rsync -vrPlu" \
 	mkd="mkdir -pv" \
@@ -31,7 +32,6 @@ alias \
 	yta="yt -x -f bestaudio/best" \
 	ytt="yt --skip-download --write-thumbnail" \
 	ffmpeg="ffmpeg -hide_banner" \
-	rmd='/bin/rm  --recursive --force --verbose ' \
 	petty="pycodestyle" \
 	ranger='. ranger' \
 	disku='ncdu' \
@@ -39,14 +39,16 @@ alias \
 	speed='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' \
 	zrc='vim ~/.config/zsh/zshrc' \
 	fonts='fc-cache -fv' \
-	!!='sudo !!' \
 	install='sudo pacman -Sy' \
 	update='sudo pacman -Syu' \
 	search='sudo pacman -Ss' \
 	remove='sudo pacman -Rns' \
 	ssh1='ssh ubuntu@54.237.57.5' \
 	ssh2='ssh ubuntu@100.24.244.206' \
-	sshlb='ssh ubuntu@52.86.186.202'
+	sshlb='ssh ubuntu@52.86.186.202' \
+	smail="email_extractor" \
+	batlife="upower -i /org/freedesktop/UPower/devices/battery_BAT0" \
+	gitinfo="onefetch"
 
 # Colorize commands when possible.
 alias \
@@ -69,8 +71,8 @@ alias \
 	p="pacman" \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
-	xq="xbps-query" \
-	z="zathura"
+	xq="xbps-query" 
+	# z="zathura"
 
 alias \
 	lf="lfub" \

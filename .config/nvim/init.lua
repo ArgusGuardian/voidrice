@@ -20,7 +20,7 @@ if astronvim.default_colorscheme then
   end
 end
 
--- vim.cmd 'colorscheme gruvbox'
-vim.cmd 'colorscheme rose-pine'
+vim.cmd 'colorscheme gruvbox'
+-- vim.cmd 'colorscheme rose-pine'
 -- vim.cmd 'colorscheme tokyonight'
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
