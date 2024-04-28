@@ -1,0 +1,3 @@
+#!/bin/bash
+xrdb ~/.config/x11/xresources
+

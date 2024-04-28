@@ -37,7 +37,6 @@ alias \
 	disku='ncdu' \
 	valgrind='valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes' \
 	speed='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' \
-	zrc='vim ~/.config/zsh/zshrc' \
 	fonts='fc-cache -fv' \
 	install='sudo pacman -Sy' \
 	update='sudo pacman -Syu' \
@@ -64,7 +63,7 @@ alias \
 	ka="killall" \
 	g="git" \
 	trem="transmission-remote" \
-	YT="youtube-viewer" \
+	YT="youtube-viewer -7" \
 	sdn="shutdown -h now" \
 	e="$EDITOR" \
 	v="$EDITOR" \

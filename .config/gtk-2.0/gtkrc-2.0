@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/argus/.gtkrc-2.0.mine"
-gtk-theme-name="Gruvbox-Dark-BL-LB"
-gtk-icon-theme-name="Gruvbox-Plus-Dark"
+gtk-theme-name="Catppuccin-Mocha-Standard-Blue-Dark"
+gtk-icon-theme-name="Papirus-Dark"
 gtk-font-name="JetBrainsMono Nerd Font 10"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0

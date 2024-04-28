@@ -1,10 +1,3 @@
-/**
- * Gruvbox rofi theme
- *
- * Color palette imported from https://github.com/sainnhe/gruvbox-material
- *
- */
-
 configuration {
   display-drun: " ";
   display-window: "󱂬 ";
@@ -15,144 +8,113 @@ configuration {
   modi: "window,drun,filebrowser";
 }
 * {
-	gruv0: #282828;
-	gruv1: #32302f;
-	gruv2: #45403d;
-	gruv3: #5a524c;
+    bg-col:  #1e1e2e;
+    bg-col-light: #1e1e2e;
+    border-col: #1e1e2e;
+    selected-col: #1e1e2e;
+    blue: #89b4fa;
+    fg-col: #cdd6f4;
+    fg-col2: #f38ba8;
+    grey: #6c7086;
 
-	gruv4: #fbf1c7;
-	gruv5: #f4e8be;
-	gruv6: #eee0b7;
+    width: 600;
+    font: "JetBrainsMono Nerd Font 14";
+}
 
-	gruv7: #a89984;
-	gruv8: #928374;
-	gruv9: #7c6f64;
-	gruv10: #504945;
-	red: #ea6962;
-
-	orange: #e78a4e;
-	yellow: #d8a657;
-	aqua: #89b482;
-	purple: #d3869b;
-
-    reddark: #c14a4a;
-    yellowdark: #b47109;
-
-    foreground:  @gruv9;
-    background-color:  transparent;
-    
-    highlight: underline bold #eee0b7;
-
-    transparent: rgba(46,52,64,0);
-
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 window {
-    location: center;
-    anchor:   center;
-    border-radius: 10px;
-    height: 560px;
-    width: 600px;
-
-    background-color: @transparent;
-    spacing: 0;
-    children:  [mainbox];
-    orientation: horizontal;
+    height: 360px;
+    border: 3px;
+    border-color: @border-col;
+    background-color: @bg-col;
 }
 
 mainbox {
-    spacing: 0;
-    children: [ inputbar, message, listview ];
-}
-
-message {
-    padding: 10px;
-    border:  0px 2px 2px 2px;
-    border-color: @gruv0;
-    background-color: @gruv7;
+    background-color: @bg-col;
 }
 
 inputbar {
-    color: @gruv6;
-    padding: 14px;
-    background-color: @gruv0;
-    border-color: @gruv0;
-
-    border: 1px;
-    border-radius: 10px 10px 0px 0px;
-}
-
-entry, prompt, case-indicator {
-    text-font: inherit;
-    text-color: inherit;
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 prompt {
-    margin: 0px 1em 0em 0em ;
+    background-color: @blue;
+    padding: 6px;
+    text-color: @bg-col;
+    border-radius: 3px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 10px;
+    text-color: @fg-col;
+    background-color: @bg-col;
 }
 
 listview {
-    padding: 8px;
-    border-radius: 0px 0px 10px 10px;
-    border: 2px 2px 2px 2px;
-    border-color: @gruv0;
-    background-color: @gruv0;
-    dynamic: false;
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 10px 0px 0px 20px;
+    columns: 2;
+    lines: 5;
+    background-color: @bg-col;
 }
 
 element {
     padding: 5px;
-    vertical-align: 0.5;
-    border-radius: 10px;
-    color: @foreground;
-    text-color: @gruv6;
-    background-color: @gruv1;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
 }
 
-element.normal.active {
-    background-color: @yellow;
+element-icon {
+    size: 25px;
 }
 
-element.normal.urgent {
-    background-color: @reddark;
+element selected {
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
 }
 
-element.selected.normal {
-    background-color: @gruv7;
-    text-color: @gruv0;
-}
-
-element.selected.active {
-    background-color: @yellowdark;
-}
-
-element.selected.urgent {
-    background-color: @red;
-}
-
-element.alternate.normal {
-    background-color: @transparent;
-}
-
-element-text, element-icon {
-    size: 3ch;
-    margin: 0 10 0 0;
-    vertical-align: 0.5;
-    background-color: inherit;
-    text-color: @gruv6;
-}
+mode-switcher {
+    spacing: 0;
+  }
 
 button {
-    padding: 6px;
-    color: @foreground;
+    padding: 10px;
+    background-color: @bg-col-light;
+    text-color: @grey;
+    vertical-align: 0.5; 
     horizontal-align: 0.5;
-
-    border: 2px 0px 2px 2px;
-    border-radius: 10px;
-    border-color: @foreground;
 }
 
-button.selected.normal {
-    border: 2px 0px 2px 2px;
-    border-color: @foreground;
+button selected {
+  background-color: @bg-col;
+  text-color: @blue;
+}
+
+message {
+    background-color: @bg-col-light;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+textbox {
+    padding: 6px;
+    margin: 20px 0px 0px 20px;
+    text-color: @blue;
+    background-color: @bg-col-light;
 }

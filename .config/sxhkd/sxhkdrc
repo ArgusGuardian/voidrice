@@ -1,11 +1,11 @@
 ############################
 #### brightness control
 ###########################
-super + control + j
-	brightnessctl set 3%-
-
-super + control + k
-	brightnessctl set 3%+
+# super + control + j
+# 	brightnessctl set 3%-
+#
+# super + control + k
+# 	brightnessctl set 3%+
 
 ############################
 #### applications
@@ -26,17 +26,17 @@ control + alt + l
 alt + w
     brave
 
-# ChatGpt
-alt + g 
-    brave --app=https://chat.openai.com
-    # floorp -new-window  --kiosk "https://chat.openai.com/"
-
-# tradingview
-alt + t
-    brave --app="https://www.tradingview.com/chart/nlWf0UHW/"
-# twitter
-alt + T
-    brave --app="https://x.com"
+# # ChatGpt
+# alt + g 
+#     brave --app=https://chat.openai.com
+#     # floorp -new-window  --kiosk "https://chat.openai.com/"
+#
+# # tradingview
+# alt + t
+#     brave --app="https://www.tradingview.com/chart/nlWf0UHW/"
+# # twitter
+# alt + T
+#     brave --app="https://x.com"
 
 # Discord
 alt + d
