@@ -11,4 +11,4 @@ esac
 
 brightness=$(brightnessctl -m | grep -m 1 "backlight" | cut -d "," -f 4)
 
-echo ^c#94E2D5^"󰃝 $brightness"
+echo ^c#f6c177^"󰃝 $brightness"

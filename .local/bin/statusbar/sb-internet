@@ -32,4 +32,4 @@ fi
 
 # printf "%s%s%s\n" "$wifiicon" "$ethericon" "$tunicon"
 
-echo ^c#89B4FA^"$wifiicon$tunicon"
+echo ^c#c4a7e7^"$wifiicon$tunicon"

@@ -37,6 +37,6 @@ for battery in /sys/class/power_supply/BAT?*; do
 	if [ -n "$warn" ]; then
 		echo ^c#FF0000^"$status$capacity%"; unset warn
 	else
-		echo ^c#A6E3A1^"$status$capacity%"
+		echo ^c#9ccfd8^"$status$capacity%"
 	fi
 done && printf "\\n"

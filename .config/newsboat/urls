@@ -1,5 +1,5 @@
 "query:news:tags # \"news\""
-"query:news:tags # \"tech\""
+"query:tech:tags # \"tech\""
 "query:blog:tags # \"blog\""
 "query:yt:tags # \"yt\""
 "---NEWS---"
@@ -9,7 +9,7 @@ http://feeds.feedburner.com/zerohedge/feed news
 https://landchad.net/rss.xml tech
 https://www.archlinux.org/feeds/news/ tech
 https://github.com/LukeSmithxyz/voidrice/commits/master.atom tech
-https://9to5linux.com/rss
+https://9to5linux.com/rss tech
 
 "---BLOG---"
 https://christitus.com/categories/linux/index.xml blog
@@ -22,3 +22,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCtYg149E_wUGVmjGz-TgyNA yt
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA yt
 https://videos.lukesmith.xyz/feeds/videos.xml?videoChannelId=2 yt
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA yt
+https://www.youtube.com/feeds/videos.xml?channel_id=UCj1VqrHhDte54oLgPG4xpuQ yt
+https://www.youtube.com/feeds/videos.xml?channel_id=UC-tLyAaPbRZiYrOJxAGB7dQ yt
+https://www.youtube.com/feeds/videos.xml?channel_id=UCiQfc9th0vcmbs0B-YX8_Tg yt
