@@ -1,3 +1,13 @@
+configuration {
+  display-drun: " ";
+  display-window: "󱂬 ";
+  display-filebrowser: " ";
+  drun-display-format: "{icon} {name}";
+  font: "JetBrainsMono Nerd Font 10";
+  show-icons: true;
+  modi: "window,drun,filebrowser";
+}
+
 @import "default"
 
 * {

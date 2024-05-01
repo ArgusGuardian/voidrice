@@ -35,7 +35,7 @@ main() {
     # when we select one of the 'selected' options listed in dmenu.
     if [[ -n $selected ]]; then
         # Piping No/Yes into dmenu as a safety measure, in case you
-        answer="$(echo -e "No\nYes" | ${MENU} "Kill $selected?")"
+        answer="$(echo -e "Yes\nNo" | ${MENU} "Kill $selected?")"
 
         if [[ $answer == "Yes" ]]; then
             # This echo command prints everything before the first space.

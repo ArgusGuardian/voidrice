@@ -1,10 +1,10 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "/home/argus/.gtkrc-2.0.mine"
-gtk-theme-name="Catppuccin-Mocha-Standard-Blue-Dark"
-gtk-icon-theme-name="Papirus-Dark"
-gtk-font-name="JetBrainsMono Nerd Font 10"
+include "~/.gtkrc-2.0.mine"
+gtk-theme-name="Arc-Gruvbox"
+gtk-icon-theme-name="Adwaita"
+gtk-font-name="Sans 10"
 gtk-cursor-theme-name="Adwaita"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_TEXT
