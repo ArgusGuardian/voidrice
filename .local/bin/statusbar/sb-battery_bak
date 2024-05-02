@@ -4,16 +4,16 @@
 # to charge status (🔌 for plugged up, 🔋 for discharging on battery, etc.).
 
 case $BLOCK_BUTTON in
-# 	3) notify-send "🔋 Battery module" "🔋: discharging
-# 🛑: not charging
-# ♻: stagnant charge
-# 🔌: charging
-# ⚡: charged
-# ❗: battery very low!
-# - Scroll to change adjust xbacklight." ;;
-# 	4) xbacklight -inc 10 ;;
-# 	5) xbacklight -dec 10 ;;
-# 	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
+	3) notify-send "🔋 Battery module" "🔋: discharging
+🛑: not charging
+♻: stagnant charge
+🔌: charging
+⚡: charged
+❗: battery very low!
+- Scroll to change adjust xbacklight." ;;
+	4) xbacklight -inc 10 ;;
+	5) xbacklight -dec 10 ;;
+	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 # Loop through all attached batteries and format the info
@@ -29,33 +29,14 @@ for battery in /sys/class/power_supply/BAT?*; do
 		"Unknown") status="󱧥 " ;;
 		*) exit 1 ;;
 	esac
-
 	capacity="$(cat "$battery/capacity" 2>&1)"
-
 	# Will make a warn variable if discharging and low
 	[ "$status" = "󰁹 " ] && [ "$capacity" -le 20 ] && warn="❗"
-	# Determine emoji based on battery level
-	if [ "$capacity" -ge 90 ]; then
-		icon="󰁹 "
-	elif [ "$capacity" -ge 60 ]; then
-		icon="󰂁 "
-	elif [ "$capacity" -ge 40 ]; then
-		icon="󰁾 "
-	elif [ "$capacity" -ge 20 ]; then
-		icon="󰁼 "
+	# Prints the info
+	# printf "%s%s%d%%" "$status" "$warn" "$capacity"; unset warn
+	if [ -n "$warn" ]; then
+		echo ^c#FF0000^"$status$capacity%"; unset warn
 	else
-		icon="󰁺 "
+		echo ^c#9ccfd8^"$status$capacity%"
 	fi
-	
-# Prints the info
-if [ "$status" = "󰁹 " ]; then
-    if [ -n "$warn" ]; then
-        echo ^c#FF0000^"$icon$capacity%"; unset warn
-    else
-        echo ^c#9ccfd8^"$icon$capacity%"
-    fi
-else
-    echo ^c#9ccfd8^"$status$capacity%"
-fi
-
 done && printf "\\n"
