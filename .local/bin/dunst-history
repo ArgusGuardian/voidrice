@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get the dunst notification history in JSON format
+dunst_output=$(dunstctl history)
+
+# Use jq to extract the 'data' value from the 'message' field in each notification
+messages=$(echo "$dunst_output" | jq -r '.data[0] | .[].message.data')
+
+# Join all messages into a single string with newline separation
+combined_message=$(echo "$messages" | tr '\n' '\n')
+
+# Display the notification with a long timeout (9999999 milliseconds)
+# This should make it persistent in many environments
+notify-send -t 9999999 "Dunst Notification History" "$combined_message"

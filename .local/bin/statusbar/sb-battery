@@ -49,6 +49,12 @@ for battery in /sys/class/power_supply/BAT?*; do
 	
 # Prints the info
 if [ "$status" = "󰁹 " ]; then
+		
+		if [ "$capacity" = "20" ]; then
+			notify-send --urgency=critical -t -i 10000 "Low Battery!
+			20% Battery remaining"
+			fi
+
     if [ -n "$warn" ]; then
         echo ^c#FF0000^"$icon$capacity%"; unset warn
     else

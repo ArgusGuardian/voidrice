@@ -66,6 +66,38 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
+
+function hb() {
+    # Check if there's an argument
+    if (( $# == 0 )); then
+        echo "No file path specified."
+        return 1
+    elif [[ ! -f $1 ]]; then
+        echo "File path does not exist."
+        return 1
+    fi
+
+    # The URI where we are posting the content
+    local uri="http://bin.christitus.com/documents"
+
+    # Posting the file content to the specified URI
+    local response
+    response=$(curl -s -X POST -d "$(cat "$1")" "$uri")
+
+    # Check if the curl command succeeded
+    if (( $? == 0 )); then
+        # Extract the 'key' from the JSON response
+        local hasteKey
+        hasteKey=$(echo "$response" | jq -r '.key')
+
+        # Print the full URL
+        echo "http://bin.christitus.com/$hasteKey"
+    else
+        echo "Failed to upload the document."
+        return 1
+    fi
+}
+
 bindkey -s '^o' '^ulfcd\n'
 
 bindkey -s '^a' '^ubc -lq\n'
@@ -99,4 +131,4 @@ sift() {
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh 2> /dev/null
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"

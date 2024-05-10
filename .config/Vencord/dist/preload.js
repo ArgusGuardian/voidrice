@@ -1,4 +1,4 @@
-// Vencord d294128
+// Vencord 6ad17ff
 // Standalone: true
 // Platform: Universal
 // Updater disabled: false

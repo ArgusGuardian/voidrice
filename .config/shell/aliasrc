@@ -23,8 +23,10 @@ alias \
 	cp="cp -iv" \
 	cat="bat" \
 	mv="mv -iv" \
-	rm="trash -f -v" \
-	rmd="trash -d -f -v" \
+	rm="rm -vI" \
+	rm="rm -r -vI" \
+	tr="trash -f -v" \
+	trd="trash -d -f -v" \
 	bc="bc -ql" \
 	rsync="rsync -vrPlu" \
 	mkd="mkdir -pv" \
@@ -40,15 +42,17 @@ alias \
 	speed='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' \
 	fonts='fc-cache -fv' \
 	install='sudo pacman -Sy' \
-	update='sudo pacman -Syu' \
+	up='sudo pacman -Syu' \
 	search='sudo pacman -Ss' \
 	remove='sudo pacman -Rns' \
 	ssh1='ssh ubuntu@54.237.57.5' \
 	ssh2='ssh ubuntu@100.24.244.206' \
 	sshlb='ssh ubuntu@52.86.186.202' \
+	sshme='ssh alaaruht@162.0.209.26 -p 21098' \
 	smail="email_extractor" \
 	batlife="upower -i /org/freedesktop/UPower/devices/battery_BAT0" \
-	gitinfo="onefetch"
+	gitinfo="onefetch" \
+	vi="vim ." 
 
 # Colorize commands when possible.
 alias \
