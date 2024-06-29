@@ -18,6 +18,8 @@ text/html=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 application/x-zerosize=nvim.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/figma=figma-linux.desktop
 
 [Added Associations]
 application/x-zerosize=nvim.desktop;

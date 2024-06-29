@@ -25,3 +25,6 @@ end
 vim.cmd 'colorscheme rose-pine'
 -- vim.cmd 'colorscheme tokyonight'
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
+
+-- add line wrap:
+vim.opt.wrap = true

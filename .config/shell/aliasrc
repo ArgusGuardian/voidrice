@@ -24,7 +24,7 @@ alias \
 	cat="bat" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	rm="rm -r -vI" \
+	rmd="rm -r -vI" \
 	tr="trash -f -v" \
 	trd="trash -d -f -v" \
 	bc="bc -ql" \
@@ -42,7 +42,7 @@ alias \
 	speed='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -' \
 	fonts='fc-cache -fv' \
 	install='sudo pacman -Sy' \
-	up='sudo pacman -Syu' \
+	up='yay' \
 	search='sudo pacman -Ss' \
 	remove='sudo pacman -Rns' \
 	ssh1='ssh ubuntu@54.237.57.5' \
